@@ -115,16 +115,16 @@
         if (actionSheet.title == @"Number Alert"){
             //This will fire first
             [self showCompareStringDialog];
-            NSLog(@"Number Alert");
+            NSLog(@"Number Alert Fired");
         }
         if (actionSheet.title == @"Compare Alert"){
             //This should fire when you click on the OK button of the number alert
-            NSLog(@"Compare Alert");
+            NSLog(@"Compare Alert Fired");
             [self showStringDialog];
         }
         if (actionSheet.title == @"String Alert"){
             // This should log the message below last and hide the last alert
-            NSLog(@"String Alert");
+            NSLog(@"String Alert Fired");
            
         }
 
