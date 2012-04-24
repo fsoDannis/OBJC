@@ -30,18 +30,19 @@
      */    //CUSTOM BUTTON NOTES
     
     // LABEL FOR USERNAME
-    username = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 20.0f, 100.0f,25.0f)];
+    username = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 20.0f, 100.0f,20)];
     [self.view addSubview:username];
     username.text=@"Username:";
     username.textAlignment=UITextAlignmentCenter;
     username.backgroundColor=[UIColor blackColor];
     username.textColor= [UIColor whiteColor];
  
-    // INPUT FOR USERNAME
-    inputUsername = [[UILabel alloc] initWithFrame:CGRectMake(105.0f, 20.0f, 205.0f,25.0f)];
+    // INPUT FOR USERNAME  - Needs some formatting!!!!
+    inputUsername = [[UITextField alloc] initWithFrame:CGRectMake(105.0f, 20.0f, 205.0f,20.0f)];
     [self.view addSubview:inputUsername];
-    inputUsername.text=@"";
-    inputUsername.textAlignment=UITextAlignmentCenter;
+    [inputUsername setBorderStyle:UITextBorderStyleRoundedRect];
+    //[inputUsername setBorderStyle:UITextBorderStyleBezel];
+    inputUsername.textAlignment=UITextAlignmentLeft;
     inputUsername.backgroundColor=[UIColor whiteColor];
     inputUsername.textColor= [UIColor blackColor];
  
@@ -50,7 +51,7 @@
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if(loginButton !=nil)
     {
-        loginButton.frame = CGRectMake(235.0f, 55.0f, 75.0f, 25.0f);
+        loginButton.frame = CGRectMake(235.0f, 50.0f, 75.0f, 25.0f);
         loginButton.tintColor= [UIColor  mylightGreen];
         [loginButton setTitle: @"Login" forState:UIControlStateNormal];
         
