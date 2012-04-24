@@ -3,7 +3,7 @@
 //  Project4
 //
 //  Created by Annis Dan on 4/23/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Dannis Designs. All rights reserved.
 //
 
 #import "ViewController.h"
