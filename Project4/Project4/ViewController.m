@@ -115,10 +115,10 @@
 {
     if (button.tag == 0 && inputUsername.text == nil)
     { 
-        loginInfo.text = @"ENTER A USERNAME PLEASE";
+        loginInfo.text = @"USERNAME CANNOT BE EMPTY";
         loginInfo.textColor= [UIColor myRed];
     }else if ( button.tag == 0){
-        loginInfo.text = inputUsername.text;
+        loginInfo.text = @"USER:%@ is Logged in",inputUsername.text;
         loginInfo.textColor = [UIColor myViolet];
     }
 }
