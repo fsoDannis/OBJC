@@ -55,6 +55,9 @@
         loginButton.tintColor= [UIColor  mylightGreen];
         [loginButton setTitle: @"Login" forState:UIControlStateNormal];
         
+        loginButton.tag = 0;
+        [loginButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        
         [self.view addSubview:loginButton];
     }  
     
@@ -65,6 +68,9 @@
         dateButton.frame = CGRectMake(10.0f, 200.0f, 100.0f, 40.0f);
         dateButton.tintColor= [UIColor  mylightGreen];
         [dateButton setTitle: @"Show Date" forState:UIControlStateNormal];
+        
+        dateButton.tag = 1;
+        [dateButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         
         [self.view addSubview:dateButton];
     }
@@ -96,6 +102,27 @@
     [super viewWillAppear:animated];
     
 }
+
+-(void)onClick:(UIButton*)button
+{
+    if (button.tag == 0)
+    {    
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"PopUp" message:@"You Pressed the LOGIN button" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        if (alertView !=nil)
+        {
+            [alertView show];
+        }
+        
+    }else if (button.tag == 1){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"PopUp" message:@"You Pressed the DATE button" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        if (alertView !=nil)
+        {
+            [alertView show];
+        }   
+    }
+
+}
+
 
 -(void)viewDidAppear:(BOOL)animated
 {
