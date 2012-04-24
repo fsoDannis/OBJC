@@ -45,6 +45,7 @@
     [inputUsername setBorderStyle:UITextBorderStyleRoundedRect];
     //[inputUsername setBorderStyle:UITextBorderStyleBezel];
     inputUsername.textAlignment=UITextAlignmentLeft;
+    inputUsername.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     inputUsername.backgroundColor=[UIColor whiteColor];
     inputUsername.textColor= [UIColor blackColor];
     [inputUsername resignFirstResponder];
