@@ -17,38 +17,67 @@
 
 - (void)viewDidLoad
 {
-    // JUST A BUTTON
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    if(button !=nil)
+    /*    
+     //CUSTOM MAGE BUTTON - Don't forget to add the image to the list
+     UIButton *customButton =  [UIButton buttonWithType:UIButtonTypeCustom]; 
+     if(customButton !=nil)
+     {
+     UIImage *myCustomImage = [UIImage imageNamed:@"customButton.png"];
+     [customButton setImage:myCustomImage forState:UIControlStateNormal];
+     customButton.frame = CGRectMake(0.0f, 350.0f, 320.0f, 50.0f);
+     [self.view addSubview:customButton];
+     }
+     */    //CUSTOM BUTTON NOTES
+    
+    // LABEL FOR USERNAME
+    username = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 20.0f, 100.0f,25.0f)];
+    [self.view addSubview:username];
+    username.text=@"Username:";
+    username.textAlignment=UITextAlignmentCenter;
+    username.backgroundColor=[UIColor blackColor];
+    username.textColor= [UIColor whiteColor];
+ 
+    // INPUT FOR USERNAME
+    inputUsername = [[UILabel alloc] initWithFrame:CGRectMake(105.0f, 20.0f, 205.0f,25.0f)];
+    [self.view addSubview:inputUsername];
+    inputUsername.text=@"";
+    inputUsername.textAlignment=UITextAlignmentCenter;
+    inputUsername.backgroundColor=[UIColor whiteColor];
+    inputUsername.textColor= [UIColor blackColor];
+ 
+    
+    // Making a Regular Button - LOGIN
+    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if(loginButton !=nil)
     {
-        button.frame = CGRectMake(10.0f, 10.0f, 100.0f, 50.0f);
-        button.tintColor= [UIColor  mylightGreen];
-        [button setTitle: @"Push Me" forState:UIControlStateNormal];
-        [button setTitle: @"Pushed" forState:UIControlStateHighlighted];
+        loginButton.frame = CGRectMake(235.0f, 55.0f, 75.0f, 25.0f);
+        loginButton.tintColor= [UIColor  mylightGreen];
+        [loginButton setTitle: @"Login" forState:UIControlStateNormal];
         
-        [self.view addSubview:button];
-    }    
-    // GOOD FRAME FOR UI BUTTONS  
+        [self.view addSubview:loginButton];
+    }  
+    
+    // Making a Regular Button - DATE
+    UIButton *dateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if(dateButton !=nil)
+    {
+        dateButton.frame = CGRectMake(10.0f, 200.0f, 100.0f, 40.0f);
+        dateButton.tintColor= [UIColor  mylightGreen];
+        [dateButton setTitle: @"Show Date" forState:UIControlStateNormal];
+        
+        [self.view addSubview:dateButton];
+    }
+    
+    // COULD BUILD AS A FUNCTION FOR ALL small UI BUTTONS  - INFO BUTTON
     UIButton *infoButton =  [UIButton buttonWithType:UIButtonTypeInfoLight]; 
     if(infoButton !=nil)
     {
        // infoButton.backgroundColor = [UIColor myGreen]; //Used to test the Image frame
-        infoButton.frame = CGRectMake(290.0f, 10.0f, 22.0f, 22.0f);
+        infoButton.frame = CGRectMake(290.0f, 370.0f, 22.0f, 22.0f);
         [self.view addSubview:infoButton];
     }
-    
-    //CUSTOM MAGE BUTTON - Don't forget to add the image to the list
-    UIButton *customButton =  [UIButton buttonWithType:UIButtonTypeCustom]; 
-    if(customButton !=nil)
-    {
-        UIImage *myCustomImage = [UIImage imageNamed:@"customButton.png"];
-        [customButton setImage:myCustomImage forState:UIControlStateNormal];
-        customButton.frame = CGRectMake(0.0f, 350.0f, 320.0f, 50.0f);
-        [self.view addSubview:customButton];
-    }
-    
-    
-    
+
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

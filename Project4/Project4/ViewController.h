@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 {
+    UILabel *username;
+    UILabel *inputUsername;
     UILabel *projectInfo;
 }
 @end
