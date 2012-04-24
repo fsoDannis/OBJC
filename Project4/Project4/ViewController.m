@@ -118,7 +118,8 @@
         loginInfo.text = @"USERNAME CANNOT BE EMPTY";
         loginInfo.textColor= [UIColor myRed];
     }else if ( button.tag == 0){
-        loginInfo.text = @"USER:%@ is Logged in",inputUsername.text;
+        NSString* userText= [inputUsername text];
+        loginInfo.text = @"USER: %@ is Logged in", userText;
         loginInfo.textColor = [UIColor myViolet];
     }
 }
