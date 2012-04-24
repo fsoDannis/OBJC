@@ -142,7 +142,7 @@
         loginInfo.textColor= [UIColor myRed];
     }else if ( button.tag == 0){
         NSString *userText = [[NSString alloc] initWithString:inputUsername.text];
-        loginInfo.text = [NSString stringWithFormat:@"User: %@ is Logged in!", userText];
+        loginInfo.text = [NSString stringWithFormat:@"User: '%@' is Logged in!", userText];
         loginInfo.textColor = [UIColor myViolet];
     }else if ( button.tag == 1){
          [self displayAlertWithString:dateLabel.text andTitle:@"Current Date/Time"];
