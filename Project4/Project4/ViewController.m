@@ -13,7 +13,9 @@
 
 @end
 
+
 @implementation ViewController
+
 
 - (void)viewDidLoad
 {
@@ -45,6 +47,7 @@
     inputUsername.textAlignment=UITextAlignmentLeft;
     inputUsername.backgroundColor=[UIColor whiteColor];
     inputUsername.textColor= [UIColor blackColor];
+    [inputUsername resignFirstResponder];
  
     
     // LOGIN BUTTON
@@ -160,13 +163,11 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+[super viewDidAppear:animated];
     
-
-
-    [super viewDidAppear:animated];
-    
-
 }
+
+
 
 
 - (void)viewDidUnload
