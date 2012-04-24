@@ -57,7 +57,6 @@
         
         loginButton.tag = 0;
         [loginButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-        
         [self.view addSubview:loginButton];
     }  
     
@@ -81,6 +80,7 @@
         [dateButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         
         [self.view addSubview:dateButton];
+    
     }
     
     dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 260.0f, 300.0f, 30.0f)];
@@ -89,7 +89,7 @@
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     if (dateFormatter != nil){
-        [dateFormatter setDateFormat: @"EEE MM.dd.yyyy 'at' HH:mm:ss zzz"];
+        [dateFormatter setDateFormat: @"EEEE MM.dd.yyyy 'at' HH:mm:ss zzzz"];
         dateLabel.text = [dateFormatter stringFromDate:date];
     }
  
@@ -149,6 +149,7 @@
         projectInfo.backgroundColor=[UIColor myBlue];
         projectInfo.textColor= [UIColor whiteColor];
     }
+    
 }
 
 //UIAlertView
