@@ -87,7 +87,7 @@
     }
     
     dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 260.0f, 300.0f, 30.0f)];
-  //  dateLabel.textAlignment=UITextAlignmentCenter;
+   //  dateLabel.textAlignment=UITextAlignmentCenter;
    // [self.view addSubview:dateLabel];
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -97,12 +97,12 @@
     }
  
     
-    // COULD BUILD AS A FUNCTION FOR ALL small UI BUTTONS  - INFO BUTTON
+    // INFO BUTTON
     UIButton *infoButton =  [UIButton buttonWithType:UIButtonTypeInfoLight]; 
     if(infoButton !=nil)
     {
        // infoButton.backgroundColor = [UIColor myGreen]; //Used to test the Image frame
-        infoButton.frame = CGRectMake(290.0f, 370.0f, 22.0f, 22.0f);
+        infoButton.frame = CGRectMake(150.0f, 350.0f, 22.0f, 22.0f);
         
         
         infoButton.tag = 2;
