@@ -87,8 +87,6 @@
     }
     
     dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 260.0f, 300.0f, 30.0f)];
-   //  dateLabel.textAlignment=UITextAlignmentCenter;
-   // [self.view addSubview:dateLabel];
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     if (dateFormatter != nil){
@@ -115,8 +113,6 @@
     projectInfo = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 395.0f, 300.0f,50.0f)];
     projectInfo.backgroundColor = [UIColor  blackColor];
     [self.view addSubview:projectInfo];
-    
-
 
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -127,9 +123,7 @@
     
     // SETTING BACKGROUND COLOR
     self.view.backgroundColor=[UIColor blackColor];
-    
 
-    
     [super viewWillAppear:animated];
     
 }
@@ -144,6 +138,7 @@
         NSString *userText = [[NSString alloc] initWithString:inputUsername.text];
         loginInfo.text = [NSString stringWithFormat:@"User: '%@' is Logged in!", userText];
         loginInfo.textColor = [UIColor myViolet];
+        [inputUsername resignFirstResponder]; // kill the keyboard
     }else if ( button.tag == 1){
          [self displayAlertWithString:dateLabel.text andTitle:@"Current Date/Time"];
     }else if ( button.tag == 2){
