@@ -6,6 +6,11 @@
 //  Copyright (c) 2012 Dannis Designs. All rights reserved.
 //
 
+//What did you do for your project?
+//List a few things that you think could use more clarification
+//What do you think you could have done better?
+
+
 #import "ViewController.h"
 #include "UICustomColors.h"
 
