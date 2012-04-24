@@ -69,7 +69,7 @@
     loginInfo.backgroundColor=[UIColor blackColor];
     loginInfo.textColor= [UIColor myBlue];
     
-    // Making a Regular Button - DATE
+    // DATE BUTTON
     UIButton *dateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if(dateButton !=nil)
     {
@@ -83,14 +83,36 @@
         [self.view addSubview:dateButton];
     }
     
+    dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 260.0f, 300.0f, 30.0f)];
+  //  dateLabel.textAlignment=UITextAlignmentCenter;
+   // [self.view addSubview:dateLabel];
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    if (dateFormatter != nil){
+        [dateFormatter setDateFormat: @"EEE MM.dd.yyyy 'at' HH:mm:ss zzz"];
+        dateLabel.text = [dateFormatter stringFromDate:date];
+    }
+ 
+    
     // COULD BUILD AS A FUNCTION FOR ALL small UI BUTTONS  - INFO BUTTON
     UIButton *infoButton =  [UIButton buttonWithType:UIButtonTypeInfoLight]; 
     if(infoButton !=nil)
     {
        // infoButton.backgroundColor = [UIColor myGreen]; //Used to test the Image frame
         infoButton.frame = CGRectMake(290.0f, 370.0f, 22.0f, 22.0f);
+        
+        
+        infoButton.tag = 2;
+        [infoButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        
         [self.view addSubview:infoButton];
     }
+    
+    // LABEL FOR MY INFORMATION
+    projectInfo = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 395.0f, 300.0f,50.0f)];
+    projectInfo.backgroundColor = [UIColor  blackColor];
+    [self.view addSubview:projectInfo];
+    
 
 
     [super viewDidLoad];
@@ -103,9 +125,7 @@
     // SETTING BACKGROUND COLOR
     self.view.backgroundColor=[UIColor blackColor];
     
-    // LABEL FOR MY INFORMATION
-    projectInfo = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 395.0f, 300.0f,50.0f)];
-    [self.view addSubview:projectInfo];
+
     
     [super viewWillAppear:animated];
     
@@ -121,17 +141,27 @@
         NSString *userText = [[NSString alloc] initWithString:inputUsername.text];
         loginInfo.text = [NSString stringWithFormat:@"User: %@ is Logged in!", userText];
         loginInfo.textColor = [UIColor myViolet];
+    }else if ( button.tag == 1){
+         [self displayAlertWithString:dateLabel.text andTitle:@"Current Date/Time"];
+    }else if ( button.tag == 2){
+        projectInfo.text = @"Dan Annis - 4/19/2012 - Project 4";
+        projectInfo.textAlignment=UITextAlignmentCenter;
+        projectInfo.backgroundColor=[UIColor myBlue];
+        projectInfo.textColor= [UIColor whiteColor];
     }
+}
+
+//UIAlertView
+-(void)displayAlertWithString:(NSString *)string andTitle:(NSString *)title{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:string delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     
-    // ADDING IN SOME PROJECT INFORMATION    
-    projectInfo.text=@"Dan Annis - 4/19/2012 - Project 4";
-    projectInfo.textAlignment=UITextAlignmentCenter;
-    projectInfo.backgroundColor=[UIColor myBlue];
-    projectInfo.textColor= [UIColor whiteColor];
+
+
     [super viewDidAppear:animated];
     
 
