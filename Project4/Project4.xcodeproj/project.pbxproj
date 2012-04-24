@@ -16,6 +16,7 @@
 		159910541546400B0024E2AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159910531546400B0024E2AD /* ViewController.m */; };
 		159910571546400B0024E2AD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159910551546400B0024E2AD /* ViewController.xib */; };
 		1599105F1546405C0024E2AD /* UICustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1599105E1546405C0024E2AD /* UICustomColors.m */; };
+		159910611546479B0024E2AD /* custombutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 159910601546479B0024E2AD /* custombutton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		159910561546400B0024E2AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		1599105D154640520024E2AD /* UICustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomColors.h; sourceTree = "<group>"; };
 		1599105E1546405C0024E2AD /* UICustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomColors.m; sourceTree = "<group>"; };
+		159910601546479B0024E2AD /* custombutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custombutton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				1599104F1546400B0024E2AD /* AppDelegate.h */,
 				159910501546400B0024E2AD /* AppDelegate.m */,
 				1599105D154640520024E2AD /* UICustomColors.h */,
+				159910601546479B0024E2AD /* custombutton.png */,
 				1599105E1546405C0024E2AD /* UICustomColors.m */,
 				159910521546400B0024E2AD /* ViewController.h */,
 				159910531546400B0024E2AD /* ViewController.m */,
@@ -155,6 +158,7 @@
 			files = (
 				1599104B1546400B0024E2AD /* InfoPlist.strings in Resources */,
 				159910571546400B0024E2AD /* ViewController.xib in Resources */,
+				159910611546479B0024E2AD /* custombutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
