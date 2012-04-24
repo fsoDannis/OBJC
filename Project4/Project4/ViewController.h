@@ -12,6 +12,7 @@
 {
     UILabel *username;
     UITextField *inputUsername;
+    UILabel *loginInfo;
     UILabel *projectInfo;
 }
 @end

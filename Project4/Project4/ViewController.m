@@ -30,7 +30,7 @@
      */    //CUSTOM BUTTON NOTES
     
     // LABEL FOR USERNAME
-    username = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 20.0f, 100.0f,20)];
+    username = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 20.0f, 100.0f,30.0f)];
     [self.view addSubview:username];
     username.text=@"Username:";
     username.textAlignment=UITextAlignmentCenter;
@@ -38,7 +38,7 @@
     username.textColor= [UIColor whiteColor];
  
     // INPUT FOR USERNAME  - Needs some formatting!!!!
-    inputUsername = [[UITextField alloc] initWithFrame:CGRectMake(105.0f, 20.0f, 205.0f,20.0f)];
+    inputUsername = [[UITextField alloc] initWithFrame:CGRectMake(105.0f, 20.0f, 205.0f,30.0f)];
     [self.view addSubview:inputUsername];
     [inputUsername setBorderStyle:UITextBorderStyleRoundedRect];
     //[inputUsername setBorderStyle:UITextBorderStyleBezel];
@@ -47,11 +47,11 @@
     inputUsername.textColor= [UIColor blackColor];
  
     
-    // Making a Regular Button - LOGIN
+    // LOGIN BUTTON
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if(loginButton !=nil)
     {
-        loginButton.frame = CGRectMake(235.0f, 50.0f, 75.0f, 25.0f);
+        loginButton.frame = CGRectMake(235.0f, 60.0f, 75.0f, 25.0f);
         loginButton.tintColor= [UIColor  mylightGreen];
         [loginButton setTitle: @"Login" forState:UIControlStateNormal];
         
@@ -61,11 +61,19 @@
         [self.view addSubview:loginButton];
     }  
     
+    // LABEL FOR LOGIN INFORMATION
+    loginInfo = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 300.0f,100.0f)];
+    [self.view addSubview:loginInfo];
+    loginInfo.text=@"Please Enter a Username.";
+    loginInfo.textAlignment=UITextAlignmentCenter;
+    loginInfo.backgroundColor=[UIColor blackColor];
+    loginInfo.textColor= [UIColor myBlue];
+    
     // Making a Regular Button - DATE
     UIButton *dateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if(dateButton !=nil)
     {
-        dateButton.frame = CGRectMake(10.0f, 200.0f, 100.0f, 40.0f);
+        dateButton.frame = CGRectMake(10.0f, 210.0f, 100.0f, 40.0f);
         dateButton.tintColor= [UIColor  mylightGreen];
         [dateButton setTitle: @"Show Date" forState:UIControlStateNormal];
         
@@ -105,24 +113,15 @@
 
 -(void)onClick:(UIButton*)button
 {
-    if (button.tag == 0)
-    {    
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"PopUp" message:@"You Pressed the LOGIN button" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        if (alertView !=nil)
-        {
-            [alertView show];
-        }
-        
-    }else if (button.tag == 1){
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"PopUp" message:@"You Pressed the DATE button" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        if (alertView !=nil)
-        {
-            [alertView show];
-        }   
+    if (button.tag == 0 && inputUsername.text == nil)
+    { 
+        loginInfo.text = @"ENTER A USERNAME PLEASE";
+        loginInfo.textColor= [UIColor myRed];
+    }else if ( button.tag == 0){
+        loginInfo.text = inputUsername.text;
+        loginInfo.textColor = [UIColor myViolet];
     }
-
 }
-
 
 -(void)viewDidAppear:(BOOL)animated
 {
